@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOD Game Description</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #E6F7FF; /* White text background */
+            color: #000000; /* Black text */
+        }
+        header {
+            background: linear-gradient(45deg, #AFFF48, #2C5700); /* Green gradient */
+            color: #E6F7FF; /* White text */
+            text-align: center;
+            padding: 1rem 0;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h2 {
+            color: #0050B3; /* Blue color */
+        }
+        .description-section {
+            margin-bottom: 20px;
+        }
+        .language-switcher {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .language-switcher button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            border: 1px solid #0050B3; /* Blue border */
+            border-radius: 5px;
+            background-color: #BAE637; /* Color for the language buttons */
+            color: #000000;
+            font-weight: 600
+        }
+        .language-switcher button:hover {
+            background-color: #AFFF48; /* Green gradient on hover */
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .contact-form h2 {
+            text-align: center;
+            color: #0050B3;
+        }
+        .contact-form label {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            padding: 10px;
+            font-size: 1rem;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: #0050B3;
+        }
+        .contact-form button {
+            padding: 12px;
+            font-size: 1rem;
+            background-color: #0050B3;
+            color: #E6F7FF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .contact-form button:hover {
+            background-color: #2C5700;
+        }
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Welcome to KOD Game</h1>
+</header>
+<div class="container">
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button onclick="showSection('english')">English</button>
+        <button onclick="showSection('french')">Français</button>
+    </div>
+    <!-- French Description Section -->
+    <div id="french-description" class="description-section" style="display:none;">
+        <h2>Bienvenue dans le jeu KOD</h2>
+        <p>Cher joueur, bonjour! Le jeu KOD (Kit Ou Double) est un nouveau jeu de lettres gratuit que nous avons le plaisir de vous proposer.</p>
+        <p>C'est un jeu de lettres qui devrait vous amuser, si vous êtes amateur de mots croisés, de scrabble ou même tout simplement joueur par nature!</p>
+        <p>Il s'agira pour vous de trouver un mot (un kod) le plus rapidement possible, à partir d'une définition (souvent astucieuse), et d'indices si vous séchez!</p>
+        <p>Grâce à nos classements, vous pourrez vous comparer aux joueurs du monde entier et à vos amis!</p>
+        <p>C'est le jeu idéal si, tous les jours, vous avez quelques minutes à perdre (ou à gagner), que ce soit à la maison, dans les transports en commun ou même aux toilettes! Bon amusement!</p>
+    </div>
+    <!-- English Description Section -->
+    <div id="english-description" class="description-section">
+        <h2>Welcome to the KOD Game</h2>
+        <p>Dear player, hello! KOD (Kit Or Double) is a new free word game that we are pleased to offer you.</p>
+        <p>It's a word game that should amuse you if you're a fan of crosswords, scrabble or even just a gambler by nature!</p>
+        <p>You'll have to find a word (a kod) as quickly as possible, based on a (often clever) definition, and clues if you're stumped!</p>
+        <p>Thanks to our rankings, you can compare yourself with players from all over the world and with your friends!</p>
+        <p>It's the ideal game if, every day, you have a few minutes to lose (or gain), whether at home, on public transport or even in the toilet! Enjoy the game!</p>
+    </div>
+    <!-- French Contact Form -->
+    <div id="french-contact-form" class="contact-form" style="display:none;">
+        <h2>Contactez-nous</h2>
+        <form action="submit_form.php" method="POST">
+            <label for="name">Votre Nom:</label><br>
+            <input type="text" id="name" name="name" required placeholder="Entrez votre nom"><br>
+            <label for="email">Votre Email:</label><br>
+            <input type="email" id="email" name="email" required placeholder="Entrez votre email"><br>
+            <label for="message">Votre Message:</label><br>
+            <textarea id="message" name="message" rows="4" required placeholder="Entrez votre message"></textarea><br>
+            <button type="submit">Envoyer</button>
+        </form>
+    </div>
+    <!-- English Contact Form -->
+    <div id="english-contact-form" class="contact-form">
+        <h2>Contact Us</h2>
+        <form action="submit_form.php" method="POST">
+            <label for="name">Your Name:</label><br>
+            <input type="text" id="name" name="name" required placeholder="Enter your name"><br>
+            <label for="email">Your Email:</label><br>
+            <input type="email" id="email" name="email" required placeholder="Enter your email"><br>
+            <label for="message">Your Message:</label><br>
+            <textarea id="message" name="message" rows="4" required placeholder="Enter your message"></textarea><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+<script>
+    function showSection(language) {
+        // Hide both description and contact form sections for both languages
+        document.getElementById('french-description').style.display = 'none';
+        document.getElementById('english-description').style.display = 'none';
+        document.getElementById('french-contact-form').style.display = 'none';
+        document.getElementById('english-contact-form').style.display = 'none';
+        // Show the selected language sections
+        if (language === 'english') {
+            document.getElementById('english-description').style.display = 'block';
+            document.getElementById('english-contact-form').style.display = 'block';
+        } else {
+            document.getElementById('french-description').style.display = 'block';
+            document.getElementById('french-contact-form').style.display = 'block';
+        }
+    }
+    // Default to showing English
+    showSection('english');
+</script>
+</body>
+</html>
