@@ -30,7 +30,7 @@
         h2 {
             color: #0050B3; /* Blue color */
         }
-        .description-section {
+        .description-section, .policy-section, .contact-form {
             margin-bottom: 20px;
         }
         .language-switcher {
@@ -50,6 +50,21 @@
         }
         .language-switcher button:hover {
             background-color: #AFFF48; /* Green gradient on hover */
+        }
+        .policy-section {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .policy-section a {
+            color: #0050B3;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .policy-section a:hover {
+            text-decoration: underline;
         }
         .contact-form {
             display: flex;
@@ -156,6 +171,15 @@
             <textarea id="message" name="message" rows="4" required placeholder="Enter your message"></textarea><br>
             <button type="submit">Submit</button>
         </form>
+    </div>
+    <!-- English Policy Section -->
+    <div id="english-policy" class="policy-section">
+        <h2>Privacy Policy and Terms of Use</h2>
+        <p>Please review our Privacy Policy and Terms of Use to understand how we collect, use, and protect your information.</p>
+        <ul>
+            <li><a href="https://kod-admin.tekup.vn/policy/" target="_blank" rel="noopener">Privacy Policy</a></li>
+            <li><a href="https://kod-admin.tekup.vn/term-of-use/" target="_blank" rel="noopener">Terms of Use</a></li>
+        </ul>
     </div>
 </div>
 <script>
